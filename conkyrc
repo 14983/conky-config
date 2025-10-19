@@ -1,0 +1,39 @@
+conky.config = {
+    background = true,
+    update_interval = 2,
+
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_hints = 'below,skip_pager,skip_taskbar,sticky,undecorated',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 255,
+
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    default_color = 'white',
+    font = 'JetBrains Mono',
+
+    alignment = 'top_left',
+    gap_x = 20,
+    gap_y = 50,
+
+    double_buffer = true,
+    no_buffers = true,
+    use_xft = true,
+    xftalpha = 1,
+}
+
+conky.text = [[
+${alignc} Up: ${uptime}
+${alignc} Load Avg: ${loadavg}
+${alignc} ${time %H:%M:%S} | ${exec echo "scale=2; ($(date +%H)*3600 + $(date +%M)*60 + $(date +%S)) / 864.0" | bc}% of Today
+${hr}
+  MEM  ${membar 8}
+CPU-01 ${cpubar cpu1 8,80} CPU-02 ${cpubar cpu2 8,80}
+CPU-03 ${cpubar cpu3 8,80} CPU-04 ${cpubar cpu4 8,80}
+CPU-05 ${cpubar cpu5 8,80} CPU-06 ${cpubar cpu6 8,80}
+CPU-07 ${cpubar cpu7 8,80} CPU-08 ${cpubar cpu8 8,80}
+CPU-09 ${cpubar cpu9 8,80} CPU-10 ${cpubar cpu10 8,80}
+]]
