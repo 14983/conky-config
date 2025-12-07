@@ -31,6 +31,7 @@ ${alignc} Load Avg: ${loadavg}
 ${alignc} ${time %H:%M:%S} | ${exec echo "scale=2; ($(date +%H)*3600 + $(date +%M)*60 + $(date +%S)) / 864.0" | bc}% of Today
 ${hr}
   MEM  ${membar 8}
+ SWAP  ${swapbar 8}
 CPU-01 ${cpubar cpu1 8,80} CPU-02 ${cpubar cpu2 8,80}
 CPU-03 ${cpubar cpu3 8,80} CPU-04 ${cpubar cpu4 8,80}
 CPU-05 ${cpubar cpu5 8,80} CPU-06 ${cpubar cpu6 8,80}
